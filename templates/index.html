@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Hello from Flask</title>
+	</head>
+	<body>
+	  <h1>Unicode data</h1>
+		<p>{{ string }}</p>
+		<table>
+			<thead>
+				<th>Character</th>
+				<th>Code Point</th>
+				<th>Name</th>
+			</thead>
+			<tbody>
+			{% for c, codepoint, name in data %}
+				<tr>
+					<td>{{ c }}</td>
+					<td>U+{{ "{0:04X}".format(codepoint) }}</td>
+					<td>{{ name }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+		<p>{{ data }}</p>
+	</body>
+</html>
