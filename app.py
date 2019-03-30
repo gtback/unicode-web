@@ -10,7 +10,7 @@ app = Flask(__name__)
 def hello(s=None):
     if not s:
         return "Add a string to the URL"
-    data = [(x, ord(x), unicodedata.name(x)) for x in s]
+    data = [(x, ord(x), unicodedata.name(x), unicodedata.category(x)) for x in s]
     return render_template('index.html', data=data, string=s)
 
 

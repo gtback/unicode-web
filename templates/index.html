@@ -11,13 +11,15 @@
 				<th>Character</th>
 				<th>Code Point</th>
 				<th>Name</th>
+				<th>Category</th>
 			</thead>
 			<tbody>
-			{% for c, codepoint, name in data %}
+			{% for c, codepoint, name, category in data %}
 				<tr>
 					<td>{{ c }}</td>
 					<td>U+{{ "{0:04X}".format(codepoint) }}</td>
 					<td>{{ name }}</td>
+					<td>{{ category }}</td>
 				</tr>
 			{% endfor %}
 			</tbody>
