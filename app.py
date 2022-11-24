@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2022 Greg Back <git@gregback.net>
+# SPDX-License-Identifier: MIT
+
 import unicodedata
 
 from flask import Flask, render_template
